@@ -7,6 +7,11 @@
 # Ignore bundler config.
 /.bundle
 
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
