@@ -1,20 +1,20 @@
 .food-details {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .food-details p {
-    margin: 0;
-    margin-bottom: 10px;
-  }
-  
-  .food-details strong {
-    font-weight: bold;
-    margin-right: 5px;
-  }
-  
-  .food-details p:last-child {
-    margin-bottom: 0;
-  }
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.food-details p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.food-details strong {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.food-details p:last-child {
+  margin-bottom: 0;
+}

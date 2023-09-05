@@ -1,70 +1,70 @@
 .success-message {
-    color: green;
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
+  color: green;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
 
-  .food-details {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
+.food-details {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
 
-  .food-details p {
-    margin: 0;
-    margin-bottom: 10px;
-  }
+.food-details p {
+  margin: 0;
+  margin-bottom: 10px;
+}
 
-  .food-details strong {
-    font-weight: bold;
-    margin-right: 5px;
-  }
+.food-details strong {
+  font-weight: bold;
+  margin-right: 5px;
+}
 
-  .food-details p:last-child {
-    margin-bottom: 0;
-  }
+.food-details p:last-child {
+  margin-bottom: 0;
+}
 
-  .button-container {
-    margin-bottom: 20px;
-  }
+.button-container {
+  margin-bottom: 20px;
+}
 
-  .button-container a {
-    display: inline-block;
-    padding: 8px 16px;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    text-decoration: none;
-  }
+.button-container a {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+}
 
-  .button-container a:hover {
-    background-color: #0069d9;
-  }
+.button-container a:hover {
+  background-color: #0069d9;
+}
 
-  .button-container form {
-    display: inline-block;
-    margin-left: 10px;
-  }
+.button-container form {
+  display: inline-block;
+  margin-left: 10px;
+}
 
-  .button-container form button {
-    display: inline-block;
-    padding: 8px 16px;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    color: #fff;
-    background-color: #dc3545;
-    border: none;
-    border-radius: 4px;
-    text-decoration: none;
-    cursor: pointer;
-  }
+.button-container form button {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+}
 
-  .button-container form button:hover {
-    background-color: #c82333;
-  }
+.button-container form button:hover {
+  background-color: #c82333;
+}
