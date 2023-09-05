@@ -1,8 +1,7 @@
-<%= form_with(model: food) do |form| %>
+<%= form_with(model: food, class: "food-form") do |form| %>
   <% if food.errors.any? %>
-    <div style="color: red">
+    <div class="error-message">
       <h2><%= pluralize(food.errors.count, "error") %> prohibited this food from being saved:</h2>
-
       <ul>
         <% food.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -11,32 +10,32 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :measurement_unit, style: "display: block" %>
-    <%= form.text_field :measurement_unit %>
+  <div class="form-group">
+    <%= form.label :measurement_unit %>
+    <%= form.text_field :measurement_unit, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :price, style: "display: block" %>
-    <%= form.number_field :price %>
+  <div class="form-group">
+    <%= form.label :price %>
+    <%= form.number_field :price, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :quantity, style: "display: block" %>
-    <%= form.number_field :quantity %>
+  <div class="form-group">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
+  <div class="form-group">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>
