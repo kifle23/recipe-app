@@ -1,0 +1,62 @@
+.success-message {
+    color: green;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  #foods {
+    margin-bottom: 20px;
+  }
+
+  .food-item {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+
+  .food-item p {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .food-item strong {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+
+  .food-item p:last-child {
+    margin-bottom: 0;
+  }
+
+  .food-item a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .food-item a:hover {
+    text-decoration: underline;
+  }
+
+  .new-food-link {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+
+  .new-food-link:hover {
+    background-color: #0069d9;
+  }
