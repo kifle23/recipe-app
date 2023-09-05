@@ -11,6 +11,9 @@
   </head>
 
   <body>
+    <% if current_user %>
+      <%= render partial: "shared/navigation" %>
+    <% end %>
    <main>
       <% if notice.present? %>
         <p class="notice"><%= notice %></p>
