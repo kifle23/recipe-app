@@ -1,0 +1,64 @@
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .login-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .login-form .field {
+    margin-bottom: 15px;
+  }
+  
+  .login-form label {
+    font-weight: bold;
+  }
+  
+  .login-form input[type="text"],
+  .login-form input[type="email"],
+  .login-form input[type="password"],
+  .login-form input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .login-form .actions {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .login-form .actions input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .login-form .actions input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  .checkbox-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    grid-gap: 10px;
+  }
+  
+  .checkbox {
+    justify-self: start;
+  }
+  
+  .checkbox-label {
+    margin-bottom: 0;
+  }
