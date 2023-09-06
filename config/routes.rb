@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root "foods#index"
+  # root "foods#index"
   resources :foods
   resources :recipes, only: [:index, :show, :new, :create, :destroy] do
     member do
@@ -19,5 +19,6 @@ Rails.application.routes.draw do
   
   get 'users', to: 'users#index'
 
+  root "public_recipes#index"
   resources :public_recipes
 end
