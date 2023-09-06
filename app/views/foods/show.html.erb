@@ -1,0 +1,10 @@
+<p class="success-message"><%= notice %></p>
+
+<div class="food-details">
+  <%= render @food %>
+</div>
+
+<div class="button-container">
+  <%= link_to "Back to foods", foods_path %>
+  <%= button_to "Delete", @food, method: :delete %>
+</div>
