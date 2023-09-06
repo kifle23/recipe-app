@@ -1,15 +1,19 @@
-<div>
-  <%= link_to 'New recipe', new_recipe_path %>
-</div>
+<section class="container flex food-placeholder">
+<div class="food flex">
+  <%= link_to new_recipe_path do %>
+    <button>Add Recipe</button>
+  <% end %>
 
 <% @recipes.each do |recipe| %>
-    <div>
-      <%= link_to recipe_path(recipe) do %>
-        <div>
-          <p> <%= recipe.name %> </p>
-          <p> <%=recipe.description %> </p>
-        </div>
+    <div class='recipe flex'>
+      <div class="recipe-details flex">
+      <h2><%= link_to recipe.name, recipe_path(recipe) %></h2>
+      <% if user_signed_in? && current_user.id == recipe.user_id %>
+        <%= button_to "Remove", recipe_path(recipe.id), method: :delete, class: "delete" %>
       <% end %>
-      <%= button_to 'REMOVE', recipe_path(recipe), method: :delete %>
+      </div>
+      <p><%= recipe.description.truncate_words(50, omission: '...') %></p>
     </div>
-<% end %>
+    <% end %>
+    </div>
+    </section>
