@@ -1,0 +1,56 @@
+<div>
+  <h1> <%= @recipe.name %> </h1>
+
+  <div>
+
+    <div>
+      <p> <span> Preparation Time: </span> <%= @recipe.preparation_time %> minutes </p>
+      <p> <span> Cooking Time: </span> <%= @recipe.cooking_time %> minutes </p>
+      <p> <span> Steps: </span> <br/>  <%= @recipe.description %> </p>
+    </div>
+
+    <div>
+      <%= form_for @recipe, url: { action: :toggle_public } do |f| %>
+        <span>Public</span>
+        <label>
+          <%= f.check_box :public, class: "peer hidden", onchange: "this.form.submit();", checked: @recipe.public? %>
+          <div></div>
+        </label>
+      <% end %>
+    </div>
+
+  </div>
+
+  <div>
+    <div>
+      <%= link_to 'Generate Shopping List', general_shopping_lists_path %>
+      <%= link_to 'Add Ingedrient', new_recipe_recipe_food_path(@recipe) %>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th> Food </th>
+          <th> Quantity </th>
+          <th> Value </th>
+          <th> Actions </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @recipe_foods.each do |recipe_food| %>
+          <tr>
+            <td> <%= recipe_food.food.name %> </td>
+            <td> <%= recipe_food.quantity %> </td>
+            <td> <%= recipe_food.quantity * recipe_food.food.price %> </td>
+            <td>
+              <div>
+                <%= link_to 'Modify', edit_recipe_recipe_food_path(@recipe, recipe_food) %> 
+                <%= button_to "Delete", recipe_recipe_food_path(@recipe, recipe_food), method: :delete %>
+              </div>
+            </td>
+          </tr>
+        <%end%>
+      </tbody>
+    </table>
+  </div>
+</div>
