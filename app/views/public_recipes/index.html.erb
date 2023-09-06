@@ -1,0 +1,27 @@
+<div >
+  <div>
+    <h1>Public Recipes</h1>
+        <%= link_to 'New recipe', new_recipe_path %>
+
+  </div>
+
+  <div>
+    <% @public_recipes.each do |recipe| %>
+      <div>
+        <div>
+          <%= link_to recipe_path(recipe) do %>
+            <p> <%= recipe.name %> </p>
+          <% end %>
+          <div>
+            by: <%=recipe.user.name%>
+          </div>
+        </div>
+
+        <%= link_to recipe_path(recipe) do %>
+          <p> <%=recipe.description %> </p>
+        <% end %>
+      </div>
+
+    <% end %>
+  </div>
+</div>

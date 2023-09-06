@@ -1,0 +1,25 @@
+<div>
+  <h2>New Recipe</h2>
+  <%= form_for @recipe do |f| %>
+    <div>
+      <%= f.label :name, "Name" %>
+      <%= f.text_field :name, placeholder: "Recipe name"%>
+    </div>
+    <div>
+      <%= f.label :preparation_time, "Preparation time" %>
+      <%= f.text_field :preparation_time, placeholder: "10" %>
+    </div>
+    <div>
+      <%= f.label :cooking_time, "Cooking time" %>
+      <%= f.text_field :cooking_time, placeholder: "20"%>
+    </div>
+    <div>
+      <%= f.label :description, "Description" %>
+      <%= f.text_area :description, placeholder: "Recipe description" %>
+    </div>
+    <div>
+      <%= f.submit "Submit"%>
+    </div>
+
+  <% end %>
+</div>
