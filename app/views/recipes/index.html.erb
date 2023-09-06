@@ -1,0 +1,15 @@
+<div>
+  <%= link_to 'New recipe', new_recipe_path %>
+</div>
+
+<% @recipes.each do |recipe| %>
+    <div>
+      <%= link_to recipe_path(recipe) do %>
+        <div>
+          <p> <%= recipe.name %> </p>
+          <p> <%=recipe.description %> </p>
+        </div>
+      <% end %>
+      <%= button_to 'REMOVE', recipe_path(recipe), method: :delete %>
+    </div>
+<% end %>
