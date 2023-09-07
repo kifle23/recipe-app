@@ -1,31 +1,32 @@
 <div>
-  <h1> <%= @recipe.name %> </h1>
+  <h1 class='recipe-name'> <%= @recipe.name %> </h1>
 
-  <div>
+  <div class='recipe-flex'>
 
     <div>
-      <p> <span> Preparation Time: </span> <%= @recipe.preparation_time %> minutes </p>
-      <p> <span> Cooking Time: </span> <%= @recipe.cooking_time %> minutes </p>
-      <p> <span> Steps: </span> <br/>  <%= @recipe.description %> </p>
+      <p class='recipe-det'> <span> Preparation Time: </span> <%= @recipe.preparation_time %> minutes </p>
+      <p class='recipe-det'> <span> Cooking Time: </span> <%= @recipe.cooking_time %> minutes </p>
+      <p class='recipe-det'> <span> Steps: </span> <br/>  <%= @recipe.description %> </p>
     </div>
 
-    <div>
+    <div class='public-box'>
       <%= form_for @recipe, url: { action: :toggle_public } do |f| %>
+        <label class='public-label'>
         <span>Public</span>
-        <label>
           <%= f.check_box :public, class: "peer hidden", onchange: "this.form.submit();", checked: @recipe.public? %>
-          <div></div>
         </label>
-      <% end %>
+      <% end %>      
     </div>
 
   </div>
 
   <div>
-    <div>
-      <%= link_to 'Generate Shopping List', general_shopping_lists_path %>
-      <%= link_to 'Add Ingedrient', new_recipe_recipe_food_path(@recipe) %>
+    <div class='generate'>
+      <%= link_to 'Generate Shopping List', shopping_lists_path, class: 'button-link'  %>
+      <%= link_to 'Add Ingedrient', new_recipe_recipe_food_path(@recipe), class: 'button-link' %>
     </div>
+
+    <hr>
 
     <table>
       <thead>
@@ -33,7 +34,7 @@
           <th> Food </th>
           <th> Quantity </th>
           <th> Value </th>
-          <th> Actions </th>
+          <th class='actions'> Actions </th>
         </tr>
       </thead>
       <tbody>
@@ -42,11 +43,9 @@
             <td> <%= recipe_food.food.name %> </td>
             <td> <%= recipe_food.quantity %> </td>
             <td> <%= recipe_food.quantity * recipe_food.food.price %> </td>
-            <td>
-              <div>
-                <%= link_to 'Modify', edit_recipe_recipe_food_path(@recipe, recipe_food) %> 
-                <%= button_to "Delete", recipe_recipe_food_path(@recipe, recipe_food), method: :delete %>
-              </div>
+            <td class='flex-actions'>
+                <%= link_to 'Modify', edit_recipe_recipe_food_path(@recipe, recipe_food), class: 'button-link' %> 
+                <%= button_to "Remove", recipe_recipe_food_path(@recipe, recipe_food), method: :delete %>
             </td>
           </tr>
         <%end%>

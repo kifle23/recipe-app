@@ -1,16 +1,16 @@
 <h2>Modify Ingredient</h2>
 
 <%= form_with(model: @recipe_food, url: recipe_recipe_food_path(@recipe, @recipe_food), method: :patch) do |f| %>
-  <div>
-    <p>Ingedrient: <%= @recipe_food.food.name %></p>
+  <div class='new-food'>
+    <p>Ingredient: <%= @recipe_food.food.name %></p>
   </div>
 
-  <div>
+  <div class='new-food'>
     <%= f.label :quantity, 'Quantity' %>
     <%= f.number_field :quantity, required: true%>
   </div>
 
-  <div>
-    <%= f.submit "Update Ingedrient" %>
+  <div class='new-food'>
+    <%= f.submit "Update Ingredient", class: 'button-link' %>
   </div>
 <% end %>
