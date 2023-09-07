@@ -1,0 +1,31 @@
+<nav class="navbar">
+  <div class="navbar-brand">
+    <%= link_to "Recipe App", root_path, class: "navbar-item" %>
+  </div>
+
+  <div class="navbar-menu">
+    <div class="navbar-item">
+      <%= link_to "Foods", foods_path, class: "nav-link #{'active' if current_page?(foods_path)}" %>
+      <%= link_to "Recipes", recipes_path, class: "nav-link #{'active' if current_page?(recipes_path)}" %>
+      <%= link_to "Public Recipes", public_recipes_path, class: "nav-link #{'active' if current_page?(public_recipes_path)}" %>
+      <%= link_to "General shopping list", shopping_lists_path, class: "nav-link #{'active' if current_page?(shopping_lists_path)}" %>
+    </div>
+    <div class="navbar-end">
+      <% if user_signed_in? %>
+        <div class="dropdown">
+          <button class="dropbtn"><%= current_user.email %> ▼</button>
+          <div class="dropdown-content">
+            <%= link_to 'Sign Out', destroy_user_session_path, 'data-turbo-method': :delete, class: "navbar-link" %>
+          </div>
+        </div>
+      <% else %>
+        <div class="navbar-item">
+          <div class="navbar-link-group">
+            <%= link_to "Sign In", new_user_session_path, class: "nav-link #{'active' if current_page?(new_user_session_path)}" %>
+            <%= link_to "Sign Up", new_user_registration_path, class: "nav-link #{'active' if current_page?(new_user_registration_path)}" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</nav>

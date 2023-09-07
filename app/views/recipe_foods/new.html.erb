@@ -1,0 +1,18 @@
+<%= link_to 'Add food', new_food_path, class: 'button-link' %>
+<%= form_with(model: @recipe_food, url: recipe_recipe_foods_path(@recipe), method: :post) do |f| %>
+
+  <div class='new-food'>
+    <%= f.label :food_id, 'Food' %>
+    <%= f.collection_select :food_id, Food.order(:name), :id, :name, required: true %>
+  </div>
+
+  <div class='new-food'>
+    <%= f.label :quantity, 'Quantity' %>
+    <%= f.number_field :quantity, required: true %>
+  </div>
+
+  <div class='new-food'>
+    <%= f.submit 'Add Ingredient', class: 'button-link'  %>
+  </div>
+
+<% end %>

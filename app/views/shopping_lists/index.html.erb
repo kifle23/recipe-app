@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>Shopping list</h1>
+  <div class="result-container">
+    <div>
+      <p>Amount of food to buy: <%= @result[:missing_items] %></p>
+    </div>
+
+    <div>
+      <p>
+        <p>Total price of food needed: $<%= @result[:total_price] %></p>
+      </p>
+      
+    </div>
+  </div>
+
+  <% if @result[:items] %>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Food</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @result[:items].each do |item| %>
+          <tr>
+            <td><%= item[:name] %></td>
+            <td><%= item[:quantity] %> <%= item[:measurement_unit] %> </td>
+            <td>$<%= item[:price] %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <h2 class="no-items">You have all the ingredients.</h2>
+  <% end %>
+</div>

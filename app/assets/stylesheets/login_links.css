@@ -1,0 +1,35 @@
+/* Style for the login and sign up links */
+.authentication-links {
+  margin-bottom: 10px;
+}
+
+.authentication-links a {
+  display: block;
+  margin-bottom: 5px;
+  color: #000;
+  text-decoration: none;
+}
+
+.authentication-links a:hover {
+  text-decoration: underline;
+}
+
+/* Style for the social login buttons */
+.social-login-buttons {
+  margin-top: 10px;
+}
+
+.social-login-buttons button {
+  display: block;
+  margin-bottom: 5px;
+  padding: 10px 20px;
+  background-color: #4267b2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.social-login-buttons button:hover {
+  background-color: #385898;
+}

@@ -1,0 +1,47 @@
+.container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.container h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.result-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.result-container p {
+  margin: 5px 0;
+}
+
+.result-container a {
+  color: blue;
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.no-items {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
