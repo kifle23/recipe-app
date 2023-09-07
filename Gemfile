@@ -58,9 +58,9 @@ group :development, :test do
 
   # The following gems aids with the nuts and bolts
   # of interacting with the browser.
+  gem 'rails-controller-testing'
   gem 'selenium-webdriver'
   gem 'webdrivers'
-  gem 'rails-controller-testing'
 end
 
 group :development do

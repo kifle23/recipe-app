@@ -15,7 +15,7 @@ RSpec.describe 'ShoppingLists', type: :feature, js: true do
     @recipe = Recipe.create!(name: 'Gallo Pinto', preparation_time: 4.5, cooking_time: 8,
                              description: 'Traditional costarrican dish', public: true, user: @user)
     @recipe.save
-    
+
     RecipeFood.destroy_all
     @recipe_food = RecipeFood.create!(quantity: 2.1, recipe: @recipe, food: @food)
     @recipe_food.save
@@ -28,10 +28,10 @@ RSpec.describe 'ShoppingLists', type: :feature, js: true do
       fill_in 'Password', with: 'p@55w0rd'
       click_button 'Log in'
     end
-    
+
     it 'Display shopping list page' do
-        visit shopping_lists_path
-        expect(page).to have_content(/Shopping list/i)
+      visit shopping_lists_path
+      expect(page).to have_content(/Shopping list/i)
     end
   end
 end

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ShoppingListsController, type: :controller do
+describe ShoppingListsController, type: :controller do
   let(:user) { double('User') }
   let(:recipe_foods) { double('RecipeFoods') }
   let(:general_foods) { double('GeneralFoods') }
@@ -17,7 +17,11 @@ RSpec.describe ShoppingListsController, type: :controller do
     allow(missing_foods).to receive(:count).and_return(2)
     allow(controller).to receive(:calculate_total_price).and_call_original
     allow(controller).to receive(:calculate_total_price).with(missing_foods).and_return(25.99)
-    allow(missing_foods).to receive(:map).and_return([{ name: 'Food 1', quantity: 2, measurement_unit: 'kg', price: 12.99 }, { name: 'Food 2', quantity: 1, measurement_unit: 'piece', price: 13.00 }])
+    allow(missing_foods).to receive(:map).and_return([
+                                                       { name: 'Food 1', quantity: 2, measurement_unit: 'kg',
+                                                         price: 12.99 }, { name: 'Food 2', quantity: 1,
+                                                                           measurement_unit: 'piece', price: 13.00 }
+                                                     ])
   end
 
   describe 'GET #index' do
@@ -29,13 +33,13 @@ RSpec.describe ShoppingListsController, type: :controller do
       expect(assigns(:total_food_items)).to eq(2)
       expect(assigns(:total_price)).to eq(25.99)
       expect(assigns(:result)).to eq({
-        missing_items: 2,
-        total_price: 25.99,
-        items: [
-          { name: 'Food 1', quantity: 2, measurement_unit: 'kg', price: 12.99 },
-          { name: 'Food 2', quantity: 1, measurement_unit: 'piece', price: 13.00 }
-        ]
-      })
+                                       missing_items: 2,
+                                       total_price: 25.99,
+                                       items: [
+                                         { name: 'Food 1', quantity: 2, measurement_unit: 'kg', price: 12.99 },
+                                         { name: 'Food 2', quantity: 1, measurement_unit: 'piece', price: 13.00 }
+                                       ]
+                                     })
     end
 
     it 'renders the index template' do

@@ -25,8 +25,8 @@ describe 'Food', type: :system do
     end
 
     it "should display the food's name" do
-        visit foods_path
-        expect(page).to have_text('Spaghetti')
+      visit foods_path
+      expect(page).to have_text('Spaghetti')
     end
 
     it "should display the food's measurement_unit" do
@@ -40,9 +40,9 @@ describe 'Food', type: :system do
     end
 
     it 'should delete a food' do
-        visit foods_path
-        click_button 'Delete'
-        expect(page).to have_content 'Food was successfully deleted.'
+      visit foods_path
+      click_button 'Delete'
+      expect(page).to have_content 'Food was successfully deleted.'
     end
   end
 end

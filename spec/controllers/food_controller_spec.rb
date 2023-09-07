@@ -65,7 +65,6 @@ RSpec.describe FoodsController, type: :controller do
         post :create, params: { food: food_params }
         expect(assigns(:food)).to eq(food)
       end
-
     end
   end
 
