@@ -19,6 +19,6 @@ Rails.application.routes.draw do
   
   get 'users', to: 'users#index'
 
-  root "public_recipes#index"
+  root "foods#index"
   resources :public_recipes
 end
