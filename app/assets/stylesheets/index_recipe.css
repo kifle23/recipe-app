@@ -269,6 +269,12 @@ hr {
   margin-top: 5px;
 }
 
+.new-recipe {
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
 .recipe p {
   font-size: 1rem;
   padding: 0.5rem;
