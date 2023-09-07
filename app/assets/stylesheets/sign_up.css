@@ -1,0 +1,55 @@
+/* Style for the sign-up form */
+.signup-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.signup-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.signup-form .field {
+  margin-bottom: 15px;
+}
+
+.signup-form label {
+  font-weight: bold;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.signup-form em {
+  font-style: italic;
+  font-size: 14px;
+  color: #777;
+}
+
+.signup-form .actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signup-form .actions input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signup-form .actions input[type="submit"]:hover {
+  background-color: #45a049;
+}
