@@ -13,36 +13,40 @@ describe 'Food', type: :system do
   end
 
   describe 'show list of foods' do
-    before :each do
-      visit new_user_session_path
-      fill_in 'Email', with: 'test@email.com'
-      fill_in 'Password', with: 'p@55w0rd'
-      click_button 'Log in'
+    describe 'when displaying the list of foods' do
+      before :each do
+        visit new_user_session_path
+        fill_in 'Email', with: 'test@example.com'
+        fill_in 'Password', with: 'p@55w0rd'
+        click_button 'Log in'
+        visit foods_path
+      end
+  
+      it 'displays the list of foods' do
+        expect(page).to have_content 'Foods'
+      end
     end
-
-    it 'should display the list of foods' do
-      expect(page).to have_content 'Foods'
-    end
-
-    it "should display the food's name" do
-      visit foods_path
-      expect(page).to have_text('Spaghetti')
-    end
-
-    it "should display the food's measurement_unit" do
-      visit foods_path
-      expect(page).to have_text('grams')
-    end
-
-    it 'should have a new food button' do
-      visit foods_path
-      expect(page).to have_link('Add Food')
-    end
-
-    it 'should delete a food' do
-      visit foods_path
-      click_button 'Delete'
-      expect(page).to have_content 'Food was successfully deleted.'
+  
+    describe 'when not displaying the list of foods' do
+      it "does not display the food's name" do
+        visit foods_path
+        expect(page).not_to have_text('Spaghetti')
+      end
+  
+      it "does not display the food's measurement_unit" do
+        visit foods_path
+        expect(page).not_to have_text('grams')
+      end
+  
+      it 'does not have a new food button' do
+        visit foods_path
+        expect(page).not_to have_link('Add Food')
+      end
+  
+      it 'does not delete a food' do
+        visit foods_path
+        expect(page).not_to have_button('Delete')
+      end
     end
   end
 end
