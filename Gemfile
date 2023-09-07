@@ -60,6 +60,7 @@ group :development, :test do
   # of interacting with the browser.
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'rails-controller-testing'
 end
 
 group :development do
