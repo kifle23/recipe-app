@@ -266,9 +266,15 @@ hr {
   outline: 1px solid #ccc;
   padding: 1rem 0.5rem;
   gap: 1rem;
+  margin-top: 5px;
 }
 
 .recipe p {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.p-public {
   font-size: 1rem;
   padding: 0.5rem;
 }

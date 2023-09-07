@@ -1,16 +1,16 @@
 <div >
   <div>
-    <h1>Public Recipes</h1>
-        <%= link_to 'New recipe', new_recipe_path %>
+    <h1 class='recipe-name'>Public Recipes</h1>
+        <%= link_to 'New Recipe', new_recipe_path, class: 'button-link' %>
 
   </div>
 
-  <div>
+  <div class="food flex">
     <% @public_recipes.each do |recipe| %>
-      <div>
-        <div>
+      <div class='recipe flex'>
+        <div class="recipe-details flex">
           <%= link_to recipe_path(recipe) do %>
-            <p> <%= recipe.name %> </p>
+            <h2> <%= recipe.name %> </h2>
           <% end %>
           <div>
             by: <%=recipe.user.name%>
@@ -18,7 +18,7 @@
         </div>
 
         <%= link_to recipe_path(recipe) do %>
-          <p> <%=recipe.description %> </p>
+          <h4> <%=recipe.description %> </h4>
         <% end %>
       </div>
 
