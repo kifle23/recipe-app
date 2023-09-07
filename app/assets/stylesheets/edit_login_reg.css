@@ -1,0 +1,80 @@
+.edit-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .edit-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .edit-form .field {
+    margin-bottom: 15px;
+  }
+  
+  .edit-form label {
+    font-weight: bold;
+  }
+  
+  .edit-form input[type="email"],
+  .edit-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .edit-form i {
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .edit-form em {
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .edit-form .actions {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .edit-form .actions input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .edit-form .actions input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  .edit-form h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .edit-form .cancel-account {
+    margin-bottom: 15px;
+  }
+  
+  .edit-form .cancel-account a {
+    color: #f00;
+    text-decoration: none;
+  }
+  
+  .edit-form .back-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #000;
+    text-decoration: none;
+  }
