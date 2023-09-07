@@ -43,6 +43,7 @@ button {
   font-family: 'Poppins', sans-serif;
   color: white;
   background: #e84855;
+  border-radius: 4px;
 }
 
 .submit:hover,
@@ -65,6 +66,67 @@ form {
 
 .flex {
   display: flex;
+}
+
+.flex-actions {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.actions {
+  text-align: center;
+}
+
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.button-link:hover {
+  background-color: #0056b3;
+  text-decoration: none;
+}
+
+.generate {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+hr {
+  margin-bottom: 40px;
+  border: #1f0318 1.5px solid;
+}
+
+.recipe-name {
+  text-align: center;
+}
+
+.recipe-det {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.recipe-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.public-box {
+  display: inline-block;
+}
+
+.public-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .title {
@@ -236,7 +298,7 @@ form {
 
 .public {
   gap: 1rem;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .line {
