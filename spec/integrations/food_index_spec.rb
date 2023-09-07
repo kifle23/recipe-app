@@ -21,28 +21,28 @@ describe 'Food', type: :system do
         click_button 'Log in'
         visit foods_path
       end
-  
+
       it 'displays the list of foods' do
         expect(page).to have_content 'Foods'
       end
     end
-  
+
     describe 'when not displaying the list of foods' do
       it "does not display the food's name" do
         visit foods_path
         expect(page).not_to have_text('Spaghetti')
       end
-  
+
       it "does not display the food's measurement_unit" do
         visit foods_path
         expect(page).not_to have_text('grams')
       end
-  
+
       it 'does not have a new food button' do
         visit foods_path
         expect(page).not_to have_link('Add Food')
       end
-  
+
       it 'does not delete a food' do
         visit foods_path
         expect(page).not_to have_button('Delete')
